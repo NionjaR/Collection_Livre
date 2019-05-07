@@ -1,0 +1,17 @@
+RewriteEngine On
+
+#RewriteRule FO
+RewriteRule ^indexFO.html$ index.php?controller=Controle&method=indexFO [L]
+RewriteRule ^Produit_Categorie-([A-Za-z0-9]+).html$ index.php?controller=Controle&method=Affiche_Produit_Categorie&id=$1 [L] 
+
+#RewriteRule BO
+RewriteRule ^indexBO.html$ index.php?controller=Controle&method=indexBO [L]
+RewriteRule ^savebook-([A-Za-z]+).html$ index.php?controller=Controle&method=get_pageBO&page=$1 [L]
+RewriteRule ^savecategorie-([A-Za-z]+).html$ index.php?controller=Controle&method=get_pageBO&page=$1 [L]
+RewriteRule ^insert_livre.html$ index.php?controller=Controle&method=insert_livre [L]
+RewriteRule ^insert_categorie.html$ index.php?controller=Controle&method=insert_categorie [L]
+RewriteRule ^list_produit-([A-Za-z]+).html$ index.php?controller=Controle&method=get_pageBO&page=$1 [L]
+RewriteRule ^page_update-([A-Za-z0-9]+).html$ index.php?controller=Controle&method=redirect_to_page_update&idlivre=$1 [L]
+RewriteRule ^updateBook.html$ index.php?controller=Controle&method=update_livre [L]
+RewriteRule ^delete_livre-([A-Za-z0-9]+) index.php?controller=Controle&method=delete_livre&idlivre=$1 [L]
+RewriteRule ^Fiche_Produit-([A-Za-z0-9]+) index.php?controller=Controle&method=Fiche_Produit&id=$1 [L]
